@@ -3,14 +3,15 @@
 
 class Pages extends Controller
 {
+
+    protected $db;
     public function __construct()
     {
-        //echo "Loaded";
+        $this->db = new Database();
     }
 
-    public function Index($param)
+    public function Index()
     {
-        echo $param;
         return $this->view("index");
     }
 }
